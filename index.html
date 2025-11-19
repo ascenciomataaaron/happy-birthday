@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <title>¡Sorpresa! 🎉</title>
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #ff9ec7 0%, #ff6b9d 50%, #ffc1e3 100%);
+        min-height: 100vh;
+      }
+      
+      .birthday-header {
+        background: linear-gradient(135deg, #ff6b9d 0%, #ff9ec7 50%, #ffc1e3 100%);
+        padding: 60px 20px;
+        text-align: center;
+        color: white;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        margin-bottom: 40px;
+      }
+      
+      .birthday-header h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        animation: bounce 2s infinite;
+      }
+      
+      .birthday-header p {
+        font-size: 1.5rem;
+        font-weight: 300;
+        opacity: 0.95;
+      }
+      
+      @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+      
+      .gallery-section {
+        padding: 40px 20px;
+      }
+      
+      .section-title {
+        text-align: center;
+        color: white;
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 40px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      }
+      
+      .carousel-container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      
+      .carousel-inner {
+        border-radius: 15px;
+        overflow: hidden;
+      }
+      
+      .carousel-item {
+        height: 600px;
+        background: rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+      
+      .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+        display: block;
+      }
+      
+      .carousel-caption {
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+        left: 0;
+        z-index: 10;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #fff;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 10px;
+        margin: 0 15px;
+        padding: 15px 20px;
+      }
+      
+      .carousel-caption h5 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: white;
+      }
+      
+      .carousel-caption p {
+        font-size: 1rem;
+        margin: 0;
+        color: white;
+      }
+      
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 50px;
+        height: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        opacity: 0.8;
+      }
+      
+      .carousel-control-prev:hover,
+      .carousel-control-next:hover {
+        opacity: 1;
+        background: rgba(255, 255, 255, 0.5);
+      }
+      
+      .carousel-control-prev {
+        left: 20px;
+      }
+      
+      .carousel-control-next {
+        right: 20px;
+      }
+      
+      .carousel-indicators li {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+      
+      .carousel-indicators .active {
+        background-color: white;
+      }
+      
+      .footer {
+        text-align: center;
+        padding: 40px 20px;
+        color: white;
+        font-size: 1.2rem;
+      }
+      
+      .footer i {
+        color: #ff6b9d;
+        margin: 0 5px;
+      }
+      
+      .message-section {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        padding: 40px;
+        max-width: 900px;
+        margin: 40px auto;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+        color: #333;
+        line-height: 1.8;
+        font-size: 1.1rem;
+      }
+      
+      .message-section h3 {
+        color: #ff6b9d;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: 700;
+      }
+      
+      .message-section p {
+        margin-bottom: 15px;
+        text-align: justify;
+      }
+      
+      .message-section .ps {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 2px solid #ffc1e3;
+        font-style: italic;
+        color: #ff6b9d;
+        font-weight: 600;
+      }
+      
+      @media (max-width: 768px) {
+        .birthday-header h1 {
+          font-size: 2.5rem;
+        }
+        
+        .birthday-header p {
+          font-size: 1.2rem;
+        }
+        
+        .section-title {
+          font-size: 2rem;
+        }
+        
+        .carousel-item {
+          height: 400px;
+        }
+        
+        .carousel-caption {
+          padding: 10px 15px;
+          bottom: 10px;
+        }
+        
+        .carousel-caption h5 {
+          font-size: 1.2rem;
+        }
+        
+        .carousel-caption p {
+          font-size: 0.9rem;
+        }
+        
+        .message-section {
+          padding: 25px 20px;
+          margin: 30px 15px;
+          font-size: 1rem;
+        }
+        
+        .message-section h3 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Birthday Header -->
+    <div class="birthday-header">
+      <h1>🎂 ¡Feliz Cumpleaños! 🎉</h1>
+      <p>Sharon Illiane Monroy Bolaños</p>
+    </div>
+
+    <!-- Photo Gallery Section -->
+    <div class="gallery-section">
+      <h2 class="section-title">
+        <i class="fas fa-images"></i> Galería de Recuerdos
+      </h2>
+      
+      <div class="carousel-container">
+        <div id="birthdayCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+          <ol class="carousel-indicators">
+            <li data-target="#birthdayCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#birthdayCarousel" data-slide-to="1"></li>
+            <li data-target="#birthdayCarousel" data-slide-to="2"></li>
+            <li data-target="#birthdayCarousel" data-slide-to="3"></li>
+            <li data-target="#birthdayCarousel" data-slide-to="4"></li>
+            <li data-target="#birthdayCarousel" data-slide-to="5"></li>
+            <li data-target="#birthdayCarousel" data-slide-to="6"></li>
+            <li data-target="#birthdayCarousel" data-slide-to="7"></li>
+            <li data-target="#birthdayCarousel" data-slide-to="8"></li>
+            <li data-target="#birthdayCarousel" data-slide-to="9"></li>
+            <li data-target="#birthdayCarousel" data-slide-to="10"></li>
+            <li data-target="#birthdayCarousel" data-slide-to="11"></li>
+            <li data-target="#birthdayCarousel" data-slide-to="12"></li>
+            <li data-target="#birthdayCarousel" data-slide-to="13"></li>
+            <li data-target="#birthdayCarousel" data-slide-to="14"></li>
+            <li data-target="#birthdayCarousel" data-slide-to="15"></li>
+            <li data-target="#birthdayCarousel" data-slide-to="16"></li>
+          </ol>
+          
+          <div class="carousel-inner">
+            <!-- Photo 1 -->
+            <div class="carousel-item active">
+              <img src="1.jpeg" alt="Birthday Photo 1" class="d-block w-100">
+              <div class="carousel-caption">
+                <h5>Museo de Historia Natural y Cultura Ambiental</h5>
+                <p>No te querías acercar ahí porque te daba miedo</p>
+              </div>
+            </div>
+            
+            <!-- Photo 2 -->
+            <div class="carousel-item">
+              <img src="2.jpeg" alt="Birthday Photo 2" class="d-block w-100">
+              <div class="carousel-caption">
+                <h5>Centro de Cultura Ambiental Chapultepec</h5>
+                <p>Esa es una de las fotos que más me gustó tomarte</p>
+              </div>
+            </div>
+            
+            <!-- Photo 3 -->
+            <div class="carousel-item">
+              <img src="3.jpeg" alt="Birthday Photo 3" class="d-block w-100">
+              <div class="carousel-caption">
+                <h5>Monumento a la Revolución</h5>
+                <p>Ese día estuvimos en un concierto de reggaeton</p>
+              </div>
+            </div>
+            
+            <!-- Photo 4 -->
+            <div class="carousel-item">
+              <img src="4.jpeg" alt="Birthday Photo 4" class="d-block w-100">
+              <div class="carousel-caption">
+                <h5>Tren Interurbano</h5>
+                <p>Querías que saliera de fondo los árboles pero solo fue un pedacito</p>
+              </div>
+            </div>
+            
+            <!-- Photo 5 -->
+            <div class="carousel-item">
+              <img src="5.jpeg" alt="Birthday Photo 5" class="d-block w-100">
+              <div class="carousel-caption">
+                <h5>Cosmovitral Toluca</h5>
+                <p>Ese día no te comiste los chilaquiles porque picaban</p>
+              </div>
+            </div>
+            
+            <!-- Photo 6 -->
+            <div class="carousel-item">
+              <img src="6.jpeg" alt="Birthday Photo 6" class="d-block w-100">
+              <div class="carousel-caption">
+                <h5>Cosmovitral Toluca</h5>
+                <p>Ese día te enojaste porque no dejaba de tomarte fotos desprevenidas</p>
+              </div>
+            </div>
+            
+            <!-- Photo 7 -->
+            <div class="carousel-item">
+              <img src="7.jpeg" alt="Birthday Photo 7" class="d-block w-100">
+              <div class="carousel-caption">
+                <h5>Centro Tolzú</h5>
+                <p>Hiciste caras muy chistosas con los dragones.</p>
+              </div>
+            </div>
+            
+            <!-- Photo 8 -->
+            <div class="carousel-item">
+              <img src="8.jpeg" alt="Birthday Photo 8" class="d-block w-100">
+              <div class="carousel-caption">
+                <h5>Museo de Bellas Artes de Toluca</h5>
+                <p>De esa foto salió mi poderoso sticker de WhatsApp.</p>
+              </div>
+            </div>
+            
+            <!-- Photo 9 -->
+            <div class="carousel-item">
+              <img src="9.jpeg" alt="Birthday Photo 9" class="d-block w-100">
+              <div class="carousel-caption">
+                <h5>Bistro Mecha Centro Histórico</h5>
+                <p>Comiste lasaña en el Bistro Mecha y vino</p>
+              </div>
+            </div>
+            
+            <!-- Photo 10 -->
+            <div class="carousel-item">
+              <img src="10.jpeg" alt="Birthday Photo 10" class="d-block w-100">
+              <div class="carousel-caption">
+                <h5>Tren Interurbano de regreso</h5>
+                <p>Te acabaste el agua del hotel</p>
+              </div>
+            </div>
+            
+            <!-- Photo 11 -->
+            <div class="carousel-item">
+              <img src="11.jpeg" alt="Birthday Photo 11" class="d-block w-100">
+              <div class="carousel-caption">
+                <h5>Bellas Artes</h5>
+                <p>Comimos comida china y galletas de la fortuna, espero te acuerdes que te tocó</p>
+              </div>
+            </div>
+            
+            <!-- Photo 12 -->
+            <div class="carousel-item">
+              <img src="12.jpeg" alt="Birthday Photo 12" class="d-block w-100">
+              <div class="carousel-caption">
+                <h5>Casita</h5>
+                <p>La primera vez que viniste a casa y conociste a mi roomie</p>
+              </div>
+            </div>
+            
+            <!-- Photo 13 -->
+            <div class="carousel-item">
+              <img src="13.jpeg" alt="Birthday Photo 13" class="d-block w-100">
+              <div class="carousel-caption">
+                <h5>Recuerdos Preciosos</h5>
+                <p>Cada foto cuenta una hermosa historia</p>
+              </div>
+            </div>
+            
+            <!-- Photo 14 -->
+            <div class="carousel-item">
+              <img src="14.jpeg" alt="Birthday Photo 14" class="d-block w-100">
+              <div class="carousel-caption">
+                <h5>Mi bendito café</h5>
+                <p>Dimos, creo yo, el mejor desayuno, tus molletes tenían cebolla</p>
+              </div>
+            </div>
+            
+            <!-- Photo 15 -->
+            <div class="carousel-item">
+              <img src="15.jpeg" alt="Birthday Photo 15" class="d-block w-100">
+              <div class="carousel-caption">
+                <h5>No sé cómo se llama aquí, está al lado de la carnicería</h5>
+                <p>Esa hamburguesa tenía bien poquita arrachera</p>
+              </div>
+            </div>
+            
+            <!-- Photo 16 -->
+            <div class="carousel-item">
+              <img src="16.jpeg" alt="Birthday Photo 16" class="d-block w-100">
+              <div class="carousel-caption">
+                <h5>Mr Pampas</h5>
+                <p>Te diste la oportunidad de conocer a mi familia</p>
+              </div>
+            </div>
+            
+            <!-- Photo 17 -->
+            <div class="carousel-item">
+              <img src="17.jpeg" alt="Birthday Photo 17" class="d-block w-100">
+              <div class="carousel-caption">
+                <h5>Casita de nuevo</h5>
+                <p>Ese dia te quisiste sentir programadora</p>
+              </div>
+            </div>
+          </div>
+          
+          <a class="carousel-control-prev" href="#birthdayCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#birthdayCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Message Section -->
+    <div class="message-section">
+      <h3>💕 Un Mensaje Especial Para Ti 💕</h3>
+      <p>Feliz cumpleaños Sharon Illiane Monroy Bolaños, sé que tal vez no es el mejor momento, aún así ya que me moviste mis horas de sueño, pasaba a desearte un feliz cumpleaños, deseo de todo corazón que todos los planes que te propongas los logres, en tu trabajo, con tu familia, etc. Ten una linda noche.</p>
+      
+      <p>Agradecido con dios, con el universo, contigo de poder permitirme conocerte, tienes un buen de virtudes super interesantes. Agradezco que hayas accedido a conocerme un poquito, de conocer a mi familia y a mi gatita jajaja, gracias por permitirme conocerte un poquito.</p>
+      
+      <p>Espero que sigas cumpliendo muchos años más! Ya eres la Sharon de 30 añoooootes! Espero que tengas muchas bendiciones en tu vida. Disfruta estos días, sé que lo estuviste esperando demasiado, cuídate mucho, toma las mejores decisiones. Te mando un fuerte abrazo y un beso en tu frente.</p>
+      
+      <p>Ten una linda noche, en verdad disfruta cada de tu viaje. Descansa mucho. Sé que disfrutas mucho de los atardeceres naranjosos.</p>
+      
+      <p class="ps">PD: Tienes un chismes buenísimos, en verdad quiero que te cuides mucho, ríete, disfruta a Yoss, come rico, descansa.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>
+        <i class="fas fa-heart"></i>
+        ¡Que tengas un cumpleaños muy divertido con Yoss
+        <i class="fas fa-heart"></i>
+      </p>
+      <p style="font-size: 1rem; margin-top: 10px; opacity: 0.9;">
+        Espero verte pronto, y que me regreses mi suadera o bueno eso sera el pretexto para volver a verte.
+      </p>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  </body>
+</html>
